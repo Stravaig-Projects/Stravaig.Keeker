@@ -33,6 +33,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stravaig.Keeker.PowerShellM
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stravaig.Keeker.Tests", "Stravaig.Keeker.Tests\Stravaig.Keeker.Tests.csproj", "{32034289-B411-433D-8449-8B75B2B66260}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "__PowershellTestScripts", "__PowershellTestScripts", "{1A86CA25-0D77-4678-9FE7-56954FCFC127}"
+	ProjectSection(SolutionItems) = preProject
+		..\sandbox\Build-KeekerModule.ps1 = ..\sandbox\Build-KeekerModule.ps1
+		..\sandbox\.gitignore = ..\sandbox\.gitignore
+		..\sandbox\SetupChildPwshSession.ps1 = ..\sandbox\SetupChildPwshSession.ps1
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

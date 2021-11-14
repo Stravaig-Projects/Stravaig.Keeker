@@ -1,24 +1,19 @@
 ﻿using System.Management.Automation;
+using Stravaig.Keeker.PowerShellModule.PowerShellObjects;
 
-namespace Stravaig.Keeker.PowerShellModule;
+namespace Stravaig.Keeker.PowerShellModule.Commands;
 
-[Cmdlet(VerbsDiagnostic.Test,"SampleCmdlet")]
-[OutputType(typeof(FavoriteStuff))]
-public class TestSampleCmdletCommand : PSCmdlet
+[Cmdlet(VerbsCommon.Get,"DotNetAssembly")]
+[OutputType(typeof(PsDotNetAssembly))]
+public class GetDotNetAssemblyCommand : PSCmdlet
 {
     [Parameter(
         Mandatory = true,
         Position = 0,
         ValueFromPipeline = true,
         ValueFromPipelineByPropertyName = true)]
-    public int FavoriteNumber { get; set; }
-
-    [Parameter(
-        Position = 1,
-        ValueFromPipelineByPropertyName = true)]
-    [ValidateSet("Cat", "Dog", "Horse")]
-    public string FavoritePet { get; set; } = "Dog";
-
+    public string Path { get; set; }
+    
     // This method gets called once for each cmdlet in the pipeline when the pipeline starts executing
     protected override void BeginProcessing()
     {
@@ -28,9 +23,8 @@ public class TestSampleCmdletCommand : PSCmdlet
     // This method will be called for each input received from the pipeline to this cmdlet; if no input is received, this method is not called
     protected override void ProcessRecord()
     {
-        WriteObject(new FavoriteStuff { 
-            FavoriteNumber = FavoriteNumber,
-            FavoritePet = FavoritePet
+        WriteObject(new PsDotNetAssembly { 
+            Path = Path,
         });
     }
 
@@ -39,10 +33,4 @@ public class TestSampleCmdletCommand : PSCmdlet
     {
         WriteVerbose("End!");
     }
-}
-
-public class FavoriteStuff
-{
-    public int FavoriteNumber { get; set; }
-    public string FavoritePet { get; set; }
 }

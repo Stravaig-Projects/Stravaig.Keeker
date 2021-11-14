@@ -1,0 +1,1 @@
+pwsh -NoExit -NoLogo -Interactive -File $PSScriptRoot/SetupChildPwshSession.ps1
