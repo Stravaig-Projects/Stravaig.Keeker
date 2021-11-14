@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "__BuildAndDeploy", "__BuildAndDeploy", "{3D36916B-2367-4624-BDCF-864173796B30}"
+	ProjectSection(SolutionItems) = preProject
+		..\build-release-notes.ps1 = ..\build-release-notes.ps1
+		..\.github\workflows\build.yml = ..\.github\workflows\build.yml
+		..\Bump-Version.ps1 = ..\Bump-Version.ps1
+		..\Create-Release.ps1 = ..\Create-Release.ps1
+		..\Reset-WipReleaseNotes.ps1 = ..\Reset-WipReleaseNotes.ps1
+		..\Set-Version.ps1 = ..\Set-Version.ps1
+		..\version.txt = ..\version.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "__Documentation", "__Documentation", "{61C05782-A253-4EDD-9463-04912EB73870}"
+	ProjectSection(SolutionItems) = preProject
+		..\release-notes\full-release-notes.md = ..\release-notes\full-release-notes.md
+		..\LICENSE = ..\LICENSE
+		..\README.md = ..\README.md
+		..\release-notes\wip-release-notes.md = ..\release-notes\wip-release-notes.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stravaig.Keeker", "Stravaig.Keeker\Stravaig.Keeker.csproj", "{020F1BC7-2755-4FA1-B821-B754AF57CDB7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "__Repository", "__Repository", "{164E663A-FD0F-422F-9C4E-E5D55361694A}"
+	ProjectSection(SolutionItems) = preProject
+		..\.gitignore = ..\.gitignore
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stravaig.Keeker.PowerShellModule", "Stravaig.Keeker.PowerShellModule\Stravaig.Keeker.PowerShellModule.csproj", "{AA8BD8E7-B2F0-4504-BFB5-01055D59313B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stravaig.Keeker.Tests", "Stravaig.Keeker.Tests\Stravaig.Keeker.Tests.csproj", "{32034289-B411-433D-8449-8B75B2B66260}"
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {064958BE-42C5-4268-8132-49EF6D009D99}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{020F1BC7-2755-4FA1-B821-B754AF57CDB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{020F1BC7-2755-4FA1-B821-B754AF57CDB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{020F1BC7-2755-4FA1-B821-B754AF57CDB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{020F1BC7-2755-4FA1-B821-B754AF57CDB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA8BD8E7-B2F0-4504-BFB5-01055D59313B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA8BD8E7-B2F0-4504-BFB5-01055D59313B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA8BD8E7-B2F0-4504-BFB5-01055D59313B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA8BD8E7-B2F0-4504-BFB5-01055D59313B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32034289-B411-433D-8449-8B75B2B66260}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32034289-B411-433D-8449-8B75B2B66260}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32034289-B411-433D-8449-8B75B2B66260}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32034289-B411-433D-8449-8B75B2B66260}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+EndGlobal
