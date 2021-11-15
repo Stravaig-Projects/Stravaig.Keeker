@@ -40,6 +40,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "__PowershellTestScripts", "
 		..\sandbox\SetupChildPwshSession.ps1 = ..\sandbox\SetupChildPwshSession.ps1
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testing", "Testing", "{DEBCBC16-D08C-4277-A300-A6A165A1C3FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleClassLibrary", "SimpleClassLibrary\SimpleClassLibrary.csproj", "{8366A65E-126C-409D-B739-A50D4EBF28E7}"
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,9 +64,17 @@ Global
 		{32034289-B411-433D-8449-8B75B2B66260}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32034289-B411-433D-8449-8B75B2B66260}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32034289-B411-433D-8449-8B75B2B66260}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8366A65E-126C-409D-B739-A50D4EBF28E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8366A65E-126C-409D-B739-A50D4EBF28E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8366A65E-126C-409D-B739-A50D4EBF28E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8366A65E-126C-409D-B739-A50D4EBF28E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{32034289-B411-433D-8449-8B75B2B66260} = {DEBCBC16-D08C-4277-A300-A6A165A1C3FE}
+		{8366A65E-126C-409D-B739-A50D4EBF28E7} = {DEBCBC16-D08C-4277-A300-A6A165A1C3FE}
 	EndGlobalSection
 EndGlobal
