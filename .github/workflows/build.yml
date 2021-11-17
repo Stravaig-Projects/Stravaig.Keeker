@@ -1,4 +1,4 @@
-name: Stravaig PROJECT NAME HERE
+name: Stravaig Keeker
 on: 
   push:
     branches: 
@@ -38,9 +38,9 @@ jobs:
     name: Build, Test, and Release
     runs-on: ubuntu-latest
     env:
-      STRAVAIG_SOLUTION: src/XXXX.sln
-      STRAVAIG_TESTS: XXXX.Tests
-      STRAVAIG_PROJECT: XXXX
+      STRAVAIG_SOLUTION: src/Stravaig.Keeker.sln
+      STRAVAIG_TESTS: Stravaig.Keeker.Tests
+      STRAVAIG_PROJECT: Stravaig.Keeker
     
     steps:
       - name: Check out code
@@ -66,14 +66,9 @@ jobs:
           echo "Is Stable: $STRAVAIG_IS_STABLE"
           
       - uses: actions/setup-dotnet@v1
-        name: Setup .NET Core 3.1 (Current LTS)
+        name: Setup .NET 6.0 (Current LTS)
         with:
-          dotnet-version: 3.1.x
-
-      - uses: actions/setup-dotnet@v1
-        name: Setup .NET 5.0 (Current)
-        with:
-          dotnet-version: 5.0.x
+          dotnet-version: 6.0.x
 
       - name: Build Solution
         run: dotnet build $STRAVAIG_SOLUTION --configuration Release

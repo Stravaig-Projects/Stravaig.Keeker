@@ -42,7 +42,7 @@ public class AssemblyBuilder
         
     }
     
-    private string BuildImpl(string projectName, [CallerFilePath]string filePath = null)
+    private string BuildImpl(string projectName, [CallerFilePath]string? filePath = null)
     {
         if (filePath == null) throw new ArgumentNullException(nameof(filePath));
         

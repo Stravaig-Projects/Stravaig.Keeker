@@ -1,9 +1,33 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
     </PropertyGroup>
+    
+    <PropertyGroup>
+        <StravaigBuildTime>$([System.DateTime]::Now.ToString("dddd, d MMMM yyyy 'at' HH:mm:ss zzzz"))</StravaigBuildTime>
+        <StravaigCopyrightYear>$([System.DateTime]::Now.ToString("yyyy"))</StravaigCopyrightYear>
+        <StravaigGitHubCommit>$(GITHUB_SHA)</StravaigGitHubCommit>
+        <StravaigWorkflowUrl>$(GITHUB_SERVER_URL)/$(GITHUB_REPOSITORY)/actions/runs/$(GITHUB_RUN_ID)</StravaigWorkflowUrl>
+        <StravaigReleaseNotes>https://github.com/$(GITHUB_REPOSITORY)/releases/tag/$(STRAVAIG_RELEASE_TAG)</StravaigReleaseNotes>
+    </PropertyGroup>
 
+    <PropertyGroup>
+        <Title>Stravaig Keeker</Title>
+        <Authors>Colin Angus Mackay</Authors>
+        <Copyright>©2020-$(StravaigCopyrightYear) Stravaig Projects. See licence for more information.</Copyright>
+        <PackageProjectUrl>https://github.com/$(GITHUB_REPOSITORY)/blob/$(StravaigGitHubCommit)/README.md</PackageProjectUrl>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <RepositoryUrl>https://github.com/$(GITHUB_REPOSITORY)</RepositoryUrl>
+        <PackageIcon>stravaig-icon.png</PackageIcon>
+        <PackageTags>reflection</PackageTags>
+        <Description>Stravaig Keeker is a reflection tool that allows you to examine .NET assemblies. This package is the base for examining assemblies from PowerShell and other clients.
+
+            Built on $(StravaigBuildTime).
+            Build run details at: $(StravaigWorkflowUrl)
+            Release notes at: $(StravaigReleaseNotes)
+        </Description>
+    </PropertyGroup>
+    
 </Project>
