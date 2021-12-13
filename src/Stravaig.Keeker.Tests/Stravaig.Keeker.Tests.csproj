@@ -12,7 +12,7 @@
         <PackageReference Include="NUnit3TestAdapter" Version="4.0.0" />
         <PackageReference Include="coverlet.collector" Version="3.1.0" />
         <PackageReference Include="Shouldly" Version="4.0.3" />
-        <PackageReference Include="Stravaig.Extensions.Logging.Diagnostics" Version="1.1.0" />
+        <PackageReference Include="Stravaig.Extensions.Logging.Diagnostics" Version="1.1.4" />
     </ItemGroup>
 
     <ItemGroup>
